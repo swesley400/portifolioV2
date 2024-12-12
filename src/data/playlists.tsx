@@ -12,7 +12,7 @@ import {
 import { TbBrandMongodb, TbBrandNextjs, TbBrandNodejs, TbBrandTypescript } from 'react-icons/tb';
 import { PiFileSqlThin } from 'react-icons/pi';
 import { SiNestjs } from 'react-icons/si';
-import { IoLogoElectron } from 'react-icons/io5';
+import { IoLogoElectron, IoLogoJavascript } from 'react-icons/io5';
 import { LiaLanguageSolid } from 'react-icons/lia';
 import { MdInterests } from 'react-icons/md';
 import { CiCloud } from 'react-icons/ci';
@@ -91,14 +91,14 @@ export const playlists: Playlist[] = [
         name: 'Java',
         description: 'Desenvolvimento de aplicações robustas e de alto desempenho',
         level: 75,
-        icon: 'coffee'
+        icon: <FaJava />
       },
       {
         id: 'skill-12',
         name: 'JavaScript',
         description: 'Habilidades essenciais para desenvolvimento web e backend',
         level: 92,
-        icon: <FaJava />
+        icon: <IoLogoJavascript />
       },
       {
         id: 'skill-13',
