@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+  }
+}
+
+.playlist-item {
+  @apply relative flex items-center p-4 rounded-lg hover:bg-white/5 cursor-pointer transition-all duration-200;
+}
+
+.playlist-item::before {
+  content: '';
+  @apply absolute left-0 w-1 h-0 bg-green-500 transition-all duration-200;
+}
+
+.playlist-item.active::before {
+  @apply h-full;
+}
+
+.playlist-item:hover .play-button {
+  @apply opacity-100 transform scale-105;
+}
+
+.play-button {
+  @apply absolute right-4 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center opacity-0 transition-all duration-200 hover:scale-110;
+}
+
+.visualizer {
+  @apply flex items-end gap-1 h-3;
+}
+
+.visualizer-bar {
+  @apply w-1 bg-green-500 rounded-full transition-all duration-150;
+  animation: pulse 0.75s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scaleY(0.5); }
+  50% { transform: scaleY(1); }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
